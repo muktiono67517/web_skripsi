@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat datang, Masyarakat Kapanewon Kokap."
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Situs ini digunakan untuk mengajukan permohonan bantuan sosial. Terdapat 3 jenis bantuan sosial yang dapat Anda ajukan, yaitu:"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/bantuan_list_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    • Bantuan Pangan Non Tunai"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/bantuan_disabilitas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    • Bantuan Disabilitas"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:id="@+id/bantuan_anak_yatim"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="    • Bantuan Anak Yatim Piatu"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:id="@+id/informasi_pengajuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Usulan Anda akan dibahas dalam Musyawarah Kalurahan dan dapat disetujui atau tidak. Mohon untuk terus memantau situs ini untuk mendapatkan informasi perkembangan proses pengajuan Anda. Terima kasih."
+        android:textSize="16sp"
+        android:textColor="#000000"
+        />
+
+</LinearLayout>

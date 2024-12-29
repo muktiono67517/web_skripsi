@@ -1,0 +1,479 @@
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    android:id="@+id/swipeRefreshLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#f0f0f0">
+
+
+
+
+    <!-- ScrollView untuk memastikan seluruh konten bisa digulirkan -->
+<ScrollView
+android:layout_width="match_parent"
+android:layout_height="match_parent">
+
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/teks_judul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Form Bantuan Pangan Non Tunai"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/teks_peringatan_mode_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:layout_marginBottom="12dp"
+        android:background="@color/yellow"/>
+
+    <!-- Nama Lengkap -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Lengkap"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/nama_lengkap"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Nama Lengkap"
+        android:inputType="text"
+        android:maxLines="1"
+        android:importantForAccessibility="yes"
+        android:background="@drawable/border"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:padding="12dp" />
+
+    <!-- Alamat -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alamat RT / RW dan Padukuhan"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/alamat_text"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Contoh: RT 01 RW 10 Sungapan"
+        android:inputType="text"
+        android:maxLines="1"
+        android:importantForAccessibility="yes"
+        android:background="@drawable/border"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:padding="12dp" />
+
+    <!-- Detail Wilayah -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail Wilayah"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Provinsi Spinner -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Provinsi"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="12dp" />
+
+    <Spinner
+        android:id="@+id/provinsi_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/border"
+        android:popupBackground="@android:color/black"
+        android:textColor="#000000" />
+
+    <!-- Kabupaten Spinner -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kabupaten"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp" />
+
+    <Spinner
+        android:id="@+id/kabupaten_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/border"
+        android:textColor="#000000"/>
+
+    <!-- Kapanewon Spinner -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kapanewon"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp" />
+
+    <Spinner
+        android:id="@+id/kapanewon_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/border"
+        android:textColor="#000000"/>
+
+    <!-- Kalurahan Spinner -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kalurahan"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp" />
+
+    <Spinner
+        android:id="@+id/kalurahan_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/border"
+        android:textColor="#000000"/>
+
+    <!-- NIK -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIK"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/nik_input"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="NIK"
+        android:inputType="number"
+        android:maxLength="16"
+        android:enabled="false"
+        android:background="#E0E0E0"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:padding="12dp" />
+
+    <!-- No KK -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nomor KK"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/no_kk_input"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="No KK"
+        android:inputType="number"
+        android:maxLength="16"
+        android:background="@drawable/border"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:padding="12dp" />
+
+    <!-- Kebutuhan Pangan -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kebutuhan Pangan"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/kebutuhan_pangan_input"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Contoh: Beras, Minyak Goreng"
+        android:inputType="text"
+        android:background="@drawable/border"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:padding="12dp" />
+
+    <!-- Alasan Usulan -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alasan Usulan"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="12dp" />
+
+    <EditText
+        android:id="@+id/alasan_usulan_input"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint=""
+        android:background="@drawable/border"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:padding="12dp" />
+
+    <!-- Foto Rumah Tampak Depan -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foto Rumah Tampak Depan"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Upload Foto Tampak Depan"
+        android:id="@+id/upload_foto_rumah_tampak_depan" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/thumb_foto_rumah_tampak_depan"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/border" />
+
+    <!-- Tombol X untuk menghapus gambar -->
+    <ImageButton
+        android:id="@+id/delete_foto_rumah_tampak_depan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_delete"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Delete image"
+        android:background="?android:attr/selectableItemBackground"
+        android:visibility="gone" /> <!-- Tombol X disembunyikan secara default -->
+
+    <!-- Foto Rumah Tampak Dalam -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foto Rumah Tampak Dalam"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Upload Foto Tampak Dalam"
+        android:id="@+id/upload_foto_rumah_tampak_dalam" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/thumb_foto_rumah_tampak_dalam"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/border" />
+
+    <!-- Tombol X untuk menghapus gambar -->
+    <ImageButton
+        android:id="@+id/delete_foto_rumah_tampak_dalam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_delete"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Delete image"
+        android:background="?android:attr/selectableItemBackground"
+        android:visibility="gone" /> <!-- Tombol X disembunyikan secara default -->
+
+    <!-- Foto Rumah Tampak Belakang -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foto Rumah Tampak Belakang"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Upload Foto Tampak Belakang"
+        android:id="@+id/upload_foto_rumah_tampak_belakang" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/thumb_foto_rumah_tampak_belakang"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/border" />
+
+    <!-- Tombol X untuk menghapus gambar -->
+    <ImageButton
+        android:id="@+id/delete_foto_rumah_tampak_belakang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_delete"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Delete image"
+        android:background="?android:attr/selectableItemBackground"
+        android:visibility="gone" /> <!-- Tombol X disembunyikan secara default -->
+
+    <!-- Foto Kartu Keluarga (KK) -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foto Kartu Keluarga (KK)"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Upload Foto KK"
+        android:id="@+id/upload_foto_kk" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/thumb_foto_kk"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/border" />
+
+    <!-- Tombol X untuk menghapus gambar -->
+    <ImageButton
+        android:id="@+id/delete_foto_kk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_delete"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Delete image"
+        android:background="?android:attr/selectableItemBackground"
+        android:visibility="gone" /> <!-- Tombol X disembunyikan secara default -->
+
+    <!-- Foto KTP -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Foto KTP"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Upload Foto KTP"
+        android:id="@+id/upload_foto_ktp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/thumb_foto_ktp"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/border" />
+
+    <!-- Tombol X untuk menghapus gambar -->
+    <ImageButton
+        android:id="@+id/delete_foto_ktp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_delete"
+        android:layout_marginTop="8dp"
+        android:contentDescription="Delete image"
+        android:background="?android:attr/selectableItemBackground"
+        android:visibility="gone" /> <!-- Tombol X disembunyikan secara default -->
+
+
+
+    <!-- Submit Button -->
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Simpan" />
+      />
+
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Update"
+        android:visibility="gone" />
+        />
+
+    <!-- Bantuan Pangan Non Tunai -->
+    <TextView
+        android:id="@+id/bantuan_pangan_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status Pengajuan Bantuan Pangan Non Tunai Anda:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#000000"/> <!-- Teks hitam -->
+
+    <TextView
+        android:id="@+id/status_bantuan_pangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="14sp"
+        android:textColor="#000000"/> <!-- Teks hitam -->
+
+    <!-- Pesan dari Admin Bantuan Pangan Non Tunai -->
+    <TextView
+        android:id="@+id/pesan_admin_bantuan_pangan_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pesan Tentang Pengajuan Bantuan Pangan Non Tunai Anda Dari Admin:"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000"/> <!-- Teks hitam -->
+
+    <TextView
+        android:id="@+id/pesan_admin_bantuan_pangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="14sp"
+        android:textColor="#000000"/> <!-- Teks hitam -->
+
+</LinearLayout>
+</ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

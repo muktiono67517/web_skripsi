@@ -1,0 +1,116 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:padding="8dp"
+        android:text="Selamat datang, admin"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/top_buttons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/header_title"
+        android:layout_alignParentEnd="true"
+        android:padding="8dp"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btn_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="PROFIL"
+            android:textColor="#000000"
+            android:padding="4dp"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="KELUAR"
+            android:textColor="#000000"
+            android:padding="4dp"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/side_menu"
+        android:layout_width="80dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header_title"
+        android:background="#000000"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <Button
+            android:id="@+id/button_beranda_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Beranda"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <Button
+            android:id="@+id/button_bpnt_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Bantuan Pangan Non Tunai"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:ellipsize="end"
+            android:maxLines="3" />
+
+        <Button
+            android:id="@+id/button_disabilitas_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Bantuan Disabilitas"
+            android:textColor="#FFFFFF"
+            android:textSize="11sp"
+            android:ellipsize="end"
+            android:maxLines="2" />
+
+        <Button
+            android:id="@+id/button_anak_yatim_piatu_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:text="Bantuan Anak Yatim Piatu"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:maxLines="4" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/form_container_admin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/side_menu"
+        android:layout_below="@id/top_buttons"
+        android:layout_margin="1dp">
+    </FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="app/build/generated/data_binding_base_class_source_out/debug/out"/>
+	<classpathentry kind="src" path="app/build/generated/data_binding_trigger/debug"/>
+	<classpathentry kind="src" path="app/build/generated/source/buildConfig/debug"/>
+	<classpathentry kind="src" path="app/build/generated/source/kapt/debug"/>
+	<classpathentry kind="src" path="app/build/tmp/kapt3/stubs/debug"/>
+	<classpathentry exported="true" kind="lib" path="app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar"/>
+	<classpathentry exported="true" kind="lib" path="app/build/intermediates/merged_java_res/debug/base.jar"/>
+	<classpathentry exported="true" kind="lib" path="app/build/intermediates/project_dex_archive/debug/out/4d4d7a21b4ab3e8455ff8e272a8181033b89cc58ccca884aaa0ca60397fd3500_0.jar"/>
+	<classpathentry exported="true" kind="lib" path="app/build/intermediates/project_dex_archive/debug/out/4d4d7a21b4ab3e8455ff8e272a8181033b89cc58ccca884aaa0ca60397fd3500_1.jar"/>
+	<classpathentry exported="true" kind="lib" path="app/build/intermediates/project_dex_archive/debug/out/4d4d7a21b4ab3e8455ff8e272a8181033b89cc58ccca884aaa0ca60397fd3500_2.jar"/>
+	<classpathentry exported="true" kind="lib" path="app/build/intermediates/project_dex_archive/debug/out/4d4d7a21b4ab3e8455ff8e272a8181033b89cc58ccca884aaa0ca60397fd3500_3.jar"/>
+	<classpathentry exported="true" kind="lib" path="gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="output" path="app/build/intermediates/javac/debug/classes"/>
+</classpath>

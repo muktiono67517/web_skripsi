@@ -1,0 +1,238 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="0dp"
+    android:background="@android:color/white">
+
+    <!-- Judul Utama -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bantuan Disabilitas"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Subjudul Pilih Kalurahan -->
+    <TextView
+        android:id="@+id/subTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Kalurahan"
+        android:textSize="14sp"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Dropdown Spinner untuk memilih Kalurahan -->
+    <Spinner
+        android:id="@+id/kalurahanSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="#f0f0f0"
+        android:padding="10dp"/>
+
+    <!-- SwipeRefreshLayout untuk konten dinamis -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="0dp">
+
+                <!-- Judul Data Bantuan -->
+                <TextView
+                    android:id="@+id/titleDataBantuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Data Bantuan Disabilitas"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="@android:color/black" />
+
+                <!-- Tombol Export -->
+                <Button
+                    android:id="@+id/btnExport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#03A9F4"
+                    android:padding="8dp"
+                    android:text="Export to Excel"
+                    android:textColor="@android:color/white"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="16dp"/>
+
+                <!-- Table Layout untuk Data -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp">
+
+                    <TableLayout
+                        android:id="@+id/TableLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*"
+                        android:paddingTop="16dp">
+
+                        <!-- Header Table -->
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/headerNamaLengkap"
+                                android:text="Nama Lengkap"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:padding="8dp"/>
+
+                            <TextView
+                                android:id="@+id/headerAlamat"
+                                android:text="Alamat"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:padding="8dp"/>
+
+                            <TextView
+                                android:id="@+id/headerNoKK"
+                                android:text="Nomor KK"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:padding="8dp"/>
+
+                            <TextView
+                                android:id="@+id/headerNIK"
+                                android:text="NIK"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:padding="8dp"/>
+
+
+
+                            <TextView
+                                android:id="@+id/headerTanggalUsulan"
+                                android:text="Tanggal Usulan"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:padding="8dp"/>
+
+                            <TextView
+                                android:id="@+id/headerStatus"
+                                android:text="Status"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:padding="8dp"/>
+
+                            <TextView
+                                android:id="@+id/headerFotoKTP"
+                                android:text="Foto KTP"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:padding="8dp"/>
+
+                            <TextView
+                                android:id="@+id/headerFotoKartuKeluarga"
+                                android:text="Foto Kartu Keluarga"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:padding="8dp"/>
+
+                            <TextView
+                                android:id="@+id/headerKomentar"
+                                android:text="Komentar"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:textColor="@android:color/black"
+                                android:padding="8dp"/>
+                        </TableRow>
+
+
+                        <TableRow
+                            android:padding="8dp">
+
+                            <TextView
+                                android:id="@+id/dataNamaLengkap"
+                                android:text="John Doe"
+                                android:gravity="center"
+                                android:padding="8dp"/>
+
+                            <TextView
+                                android:id="@+id/dataAlamat"
+                                android:text="Jl. Raya No. 10"
+                                android:gravity="center"
+                                android:padding="8dp"/>
+
+                            <TextView
+                                android:id="@+id/dataNoKK"
+                                android:text="1234567890123456"
+                                android:gravity="center"
+                                android:padding="8dp"/>
+
+                            <TextView
+                                android:id="@+id/dataNIK"
+                                android:text="9876543210"
+                                android:gravity="center"
+                                android:padding="8dp"/>
+
+
+                            <TextView
+                                android:id="@+id/dataTanggalUsulan"
+                                android:text="2024-12-10"
+                                android:gravity="center"
+                                android:padding="8dp"/>
+
+                            <Spinner
+                                android:id="@+id/dataStatusSpinner"
+                                android:gravity="center"
+                                android:padding="8dp"/>
+
+                            <ImageView
+                                android:id="@+id/dataFotoKTP"
+                                android:gravity="center"
+                                android:padding="8dp"/>
+
+                            <ImageView
+                                android:id="@+id/dataFotoKartuKeluarga"
+                                android:gravity="center"
+                                android:padding="8dp"/>
+
+                            <EditText
+                                android:id="@+id/dataKomentar"
+                                android:text=""
+                                android:gravity="center"
+                                android:padding="8dp"
+                                android:textColor="@color/black"
+                                android:background="@android:color/white" />
+                        </TableRow>
+
+
+                    </TableLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>
